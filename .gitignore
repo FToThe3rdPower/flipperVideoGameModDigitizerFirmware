@@ -1,2 +1,9 @@
-build/
+# Build intermediates — not needed to reproduce the firmware
+build/*
+!build/vgm_scope.uf2
+!build/vgm_scope.hex
+!build/vgm_scope.bin
+
+# IDE / OS cruft
 .vscode/
+.DS_Store
