@@ -7,3 +7,6 @@ build/*
 # IDE / OS cruft
 .vscode/
 .DS_Store
+
+# personal
+ideas.txt
