@@ -56,7 +56,7 @@ Defined at the top of [main.c](main.c):
 
 ---
 
-## Building
+## Building it yourself
 
 **Prerequisites**
 
@@ -82,6 +82,18 @@ Outputs land in `build/`:
 
 ## Flashing
 
+### Option A — Phone (no PC required)
+
+Pre-built firmware is committed to this repo at `build/vgm_scope.uf2`. You can flash it to the VGM entirely from your phone:
+
+1. Download `build/vgm_scope.uf2` from this repo (tap the file on GitHub → **Download raw file**).
+2. Open the **Flipper Mobile App** and connect to your Flipper via Bluetooth.
+3. In the app's **SD Card** file browser, upload `vgm_scope.uf2` to `SD Card/apps_data/vgm_scope/` (create the folder if it doesn't exist).
+4. On the Flipper, open **Apps → GPIO → Video Game Module**, then choose **Update firmware** and select the `.uf2` file you just uploaded.
+5. The VGM reboots into the new firmware and begins streaming immediately.
+
+### Option B — USB drag-and-drop (PC)
+
 1. Hold **BOOTSEL** on the VGM while connecting USB — it mounts as a mass-storage drive.
 2. Copy `build/vgm_scope.uf2` onto the drive.
 3. The board reboots and begins streaming immediately.
@@ -90,4 +102,4 @@ Outputs land in `build/`:
 
 ## Companion App
 
-The Flipper-side oscilloscope app lives in a separate repository. It reads frames from USART1, validates the CRC, and renders the waveform on the Flipper's 128×64 display.
+The Flipper-side oscilloscope app lives in the [O-scope4flipper repo](https://github.com/FToThe3rdPower/O-scope4flipper). It reads frames from USART1, validates the CRC, and renders the waveform on the Flipper's 128×64 display.
